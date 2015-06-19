@@ -7,18 +7,19 @@ import views.html.*;
 import models.User;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.twirl.api.Html;
 
 public class Application extends Controller {
 
     public Result index() {
-        return ok(index.render("Your new application is ready."));
+        return ok(index.render("Your new application is ready.",new Html("")));
     }
     
     public Result userList(int userNum) {
     	List<User> users = new ArrayList<User>();
     	users.add(new User("mlewis","Mark","Lewis"));
     	users.add(new User("llacher","Lisa","Lacher"));
-    	return ok(userList.render(users));
+    	return ok(index.render("User List",userList.render(users)));
     }
 
 }
