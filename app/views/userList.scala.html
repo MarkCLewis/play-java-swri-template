@@ -1,0 +1,10 @@
+@(users:java.util.List[User])
+
+@main("User List") {
+	<p>This will be a user list. We have to pass in some users.</p>
+	<table>
+		@for(user <- users) {
+			<tr><td>@user.getUserName()</td><td>@user.getFirstName()</td><td>@user.getLastName()</td></tr>
+		}
+	</table>
+}
