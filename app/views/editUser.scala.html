@@ -1,0 +1,19 @@
+@* editUser Template File *@
+@(userForm:Form[User])
+@import helper._
+
+@main("User Form") {
+  <h3>User Form</h3>
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+      @helper.form(action = routes.Application.saveUser()) {
+      	<fieldset>
+          <legend>User (@userForm("userName").valueOr("New"))</legend>
+          @helper.inputText(userForm("userName"), '_label -> "UserName", '_class -> "form-group", 'class -> "form-control")
+        </fieldset>
+        <input type="submit" class="btn btn-primary" value="Save">
+        <a class="btn" href="@routes.Application.userList()">Cancel</a>
+      }
+    </div>
+  </div>
+}

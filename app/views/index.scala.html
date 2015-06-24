@@ -1,9 +1,9 @@
-@(message: String,primary:Html)
+@(message: String)
 
-@main("Welcome to Play") {
+@main("SwRI Play Demo") {
 
-    @message
+    <h3 class="text-center">@message</h3>
     <br>
-    @primary
+    <p><a href="@routes.Application.userList()">User List</a></p>
 
 }

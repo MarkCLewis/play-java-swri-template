@@ -1,25 +1,49 @@
 package controllers;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import views.html.*;
 import models.User;
+import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
-import play.twirl.api.Html;
+import views.html.*;
 
 public class Application extends Controller {
+	
+	private static final Form<User> userForm = new Form<User>(User.class);
 
     public Result index() {
-        return ok(index.render("Your new application is ready.",new Html("")));
+        return ok(index.render("Your new application is ready."));
     }
     
-    public Result userList(int userNum) {
-    	List<User> users = new ArrayList<User>();
-    	users.add(new User("mlewis","Mark","Lewis"));
-    	users.add(new User("llacher","Lisa","Lacher"));
-    	return ok(index.render("User List",userList.render(users)));
+    public Result userList() {
+    	return ok(userList.render(User.fetchUsers()));
+    }
+    
+    public Result displayUser(String uname) {
+    	return ok(displayUser.render(User.fetchByUserName(uname)));
+    }
+    
+    public Result newUser() {
+    	return TODO;
+    }
+    
+    public Result deleteUser(String uname) {
+    	return TODO;
+    }
+    
+    public Result editUser(String uname) {
+    	User user = User.fetchByUserName(uname);
+    	if(user==null) {
+    		// Consider flash of an error
+    		return ok("Invalid user number");
+    	} else {
+	    	Form<User> filledForm = userForm.fill(user);
+	    	return ok(editUser.render(filledForm));
+    	}
+    }
+    
+    public Result saveUser() {
+    	Form<User> boundForm = userForm.bindFromRequest();
+    	return TODO;
     }
 
 }
