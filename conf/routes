@@ -18,15 +18,17 @@ POST	/user/save					controllers.Application.saveUser()
 
 DELETE	/user/:uname				controllers.Application.deleteUser(uname:String)
 
-GET		/todo						controllers.Application.todo()
+GET		/todo						controllers.RoutingSamples.todo()
 
-GET     /sample/:num                controllers.Application.intArgument(num:Int)
+GET     /sample/:num                controllers.RoutingSamples.intArgument(num:Int)
 
-GET     /sample                     controllers.Application.twoParams(p1:Int ?= 0,p2:String)
+GET     /sample                     controllers.RoutingSamples.twoParams(p1:Int ?= 0,p2:String)
 
-GET     /regex/$id<\d+\w+>         controllers.Application.regexOrSplatArgument(id)
+GET     /regex/$id<\d+\w+>         controllers.RoutingSamples.regexOrSplatArgument(id)
 
-GET     /splat/*splat              controllers.Application.regexOrSplatArgument(splat)
+GET     /splat/*splat              controllers.RoutingSamples.regexOrSplatArgument(splat)
+
+GET     /json/:uname               controllers.JSONSamples.userData(uname)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

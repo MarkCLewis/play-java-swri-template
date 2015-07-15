@@ -54,20 +54,4 @@ public class Application extends Controller {
     	return redirect(routes.Application.userList());
     }
     
-    public Result todo() {
-        return TODO;
-    }
-
-    public Result intArgument(int arg) {
-        return ok("arg = " + Integer.toString(arg));
-    }
-
-    public Result twoParams(int p1,String p2) {
-        return ok("p1 = "+Integer.toString(p1)+", p2 = "+p2);
-    }
-    
-    public Result regexOrSplatArgument(String arg) {
-        return ok("arg = "+arg);
-    }
-    
 }
