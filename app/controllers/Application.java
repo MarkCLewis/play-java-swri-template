@@ -23,11 +23,12 @@ public class Application extends Controller {
     }
     
     public Result newUser() {
-    	return TODO;
+    	return ok(editUser.render(userForm));
     }
     
     public Result deleteUser(String uname) {
-    	return TODO;
+    	User.remove(User.fetchByUserName(uname));
+    	return ok("");
     }
     
     public Result editUser(String uname) {
@@ -43,7 +44,30 @@ public class Application extends Controller {
     
     public Result saveUser() {
     	Form<User> boundForm = userForm.bindFromRequest();
-    	return TODO;
+    	if(boundForm.hasErrors()) {
+    		flash("error","Please correct the form below.");
+    		return badRequest(editUser.render(boundForm));
+    	}
+    	User user = boundForm.get();
+    	user.save();
+    	flash("success","User successfully saved.");
+    	return redirect(routes.Application.userList());
+    }
+    
+    public Result todo() {
+        return TODO;
     }
 
+    public Result intArgument(int arg) {
+        return ok("arg = " + Integer.toString(arg));
+    }
+
+    public Result twoParams(int p1,String p2) {
+        return ok("p1 = "+Integer.toString(p1)+", p2 = "+p2);
+    }
+    
+    public Result regexOrSplatArgument(String arg) {
+        return ok("arg = "+arg);
+    }
+    
 }

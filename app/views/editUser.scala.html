@@ -2,18 +2,26 @@
 @(userForm:Form[User])
 @import helper._
 
-@main("User Form") {
+@main("User Form"){&nbsp;}{
   <h3>User Form</h3>
   <div class="row">
     <div class="col-lg-4 col-lg-offset-4">
       @helper.form(action = routes.Application.saveUser()) {
       	<fieldset>
           <legend>User (@userForm("userName").valueOr("New"))</legend>
-          @helper.inputText(userForm("userName"), '_label -> "UserName", '_class -> "form-group", 'class -> "form-control")
+          @helper.inputText(userForm("userName"), '_label -> "User Name", '_class -> "form-group", 'class -> "form-control")
+          @helper.inputText(userForm("firstName"), '_label -> "First Name", '_class -> "form-group", 'class -> "form-control")
+          @helper.inputText(userForm("middleInitial"), '_label -> "Middle Initial", '_class -> "form-group", 'class -> "form-control")
+          @helper.inputText(userForm("lastName"), '_label -> "Last Name", '_class -> "form-group", 'class -> "form-control")
+          @helper.inputText(userForm("email"), '_label -> "Email", '_class -> "form-group", 'class -> "form-control")
+          @helper.inputText(userForm("phone"), '_label -> "Phone", '_class -> "form-group", 'class -> "form-control")
+          @helper.checkbox(userForm("active"), '_label -> "Active", '_class -> "form-group", 'class -> "form-control")
+          @helper.checkbox(userForm("usPerson"), '_label -> "US Person", '_class -> "form-group", 'class -> "form-control")
+          @helper.textarea(userForm("additionalInfo"), '_label -> "Additional Info", '_class -> "form-group", 'class -> "form-control")
         </fieldset>
         <input type="submit" class="btn btn-primary" value="Save">
         <a class="btn" href="@routes.Application.userList()">Cancel</a>
       }
     </div>
   </div>
-}
+}{&nbsp;}

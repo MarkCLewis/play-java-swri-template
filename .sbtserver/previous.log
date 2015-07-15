@@ -1,5 +1,5 @@
-New log file opened at Fri Jun 19 13:41:23 CDT 2015 by 7036@MLEWIS7
-jvm 7036@MLEWIS7
+New log file opened at Tue Jul 14 15:03:55 CDT 2015 by 7428@MLEWIS7
+jvm 7428@MLEWIS7
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.45-b02
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\mclewis\workspace\play-java-swri-template\project, returning: (play-java-swri-template-build)
 Loading project definition from C:\Users\mclewis\workspace\play-java-swri-template\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@328f441, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@3dc3646b, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -67,9 +67,9 @@ Set current project to play-java (in build file:/C:/Users/mclewis/workspace/play
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/C:/Users/mclewis/workspace/play-java-swri-template/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@51e7c577, check cycles: false
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@2b1173b7, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -86,18 +86,12 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed Jun 19, 2015 1:41:31 PM
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/mclewis/workspace/play-java-swri-template/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@2425c24d, check cycles: false
-Total time: 0 s, completed Jun 19, 2015 1:41:31 PM
+Total time: 2 s, completed Jul 14, 2015 3:04:27 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/mclewis/workspace/play-java-swri-template/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@79cb1c59, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@7a3ff203, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -114,36 +108,58 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed Jun 19, 2015 1:41:32 PM
+Total time: 1 s, completed Jul 14, 2015 3:04:28 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/mclewis/workspace/play-java-swri-template/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@1b656a32, check cycles: false
-Total time: 0 s, completed Jun 19, 2015 1:41:32 PM
+Running task... Cancel: sbt.server.ServerTaskCancellation@f0e28b9, check cycles: false
+Total time: 0 s, completed Jul 14, 2015 3:04:28 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/mclewis/workspace/play-java-swri-template/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@5b3be195, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed Jul 14, 2015 3:04:29 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@13d5742c, check cycles: false
-Total time: 0 s, completed Jun 19, 2015 1:41:56 PM
+Running task... Cancel: sbt.server.ServerTaskCancellation@220c8a4f, check cycles: false
+Total time: 0 s, completed Jul 14, 2015 3:04:33 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/mclewis/workspace/play-java-swri-template/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@45df2a07, check cycles: false
-Total time: 1 s, completed Jun 19, 2015 1:41:59 PM
+Running task... Cancel: sbt.server.ServerTaskCancellation@4ec1c2b9, check cycles: false
+Total time: 0 s, completed Jul 14, 2015 3:04:40 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@2d4c892, check cycles: false
-Total time: 0 s, completed Jun 19, 2015 1:42:01 PM
+Running task... Cancel: sbt.server.ServerTaskCancellation@5f8deb50, check cycles: false
+Total time: 0 s, completed Jul 14, 2015 3:04:43 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/mclewis/workspace/play-java-swri-template/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@347b8838, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@45d45f3, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -160,18 +176,12 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Warning: node.js detection failed, sbt will use the Rhino based Trireme JavaScript engine instead to run JavaScript assets compilation, which in some cases may be orders of magnitude slower than using node.js.
 Copy resource mappings: 
 	(C:\Users\mclewis\workspace\play-java-swri-template\conf\application.conf,C:\Users\mclewis\workspace\play-java-swri-template\target\scala-2.11\classes\application.conf)
 	(C:\Users\mclewis\workspace\play-java-swri-template\conf\logback.xml,C:\Users\mclewis\workspace\play-java-swri-template\target\scala-2.11\classes\logback.xml)
 	(C:\Users\mclewis\workspace\play-java-swri-template\conf\routes,C:\Users\mclewis\workspace\play-java-swri-template\target\scala-2.11\classes\routes)
-Total time: 2 s, completed Jun 19, 2015 1:42:48 PM
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 1
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@5ebbd6db, check cycles: false
-Total time: 0 s, completed Jun 19, 2015 2:31:53 PM
+Warning: node.js detection failed, sbt will use the Rhino based Trireme JavaScript engine instead to run JavaScript assets compilation, which in some cases may be orders of magnitude slower than using node.js.
+Total time: 2 s, completed Jul 14, 2015 3:04:54 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -180,4 +190,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 7036@MLEWIS7 logs at Mon Jun 22 08:46:06 CDT 2015, goodbye.
+Closing the 7428@MLEWIS7 logs at Wed Jul 15 08:43:35 CDT 2015, goodbye.

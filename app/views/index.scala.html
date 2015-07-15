@@ -1,9 +1,14 @@
 @(message: String)
 
-@main("SwRI Play Demo") {
+@main("SwRI Play Demo") {&nbsp;} {
 
     <h3 class="text-center">@message</h3>
     <br>
     <p><a href="@routes.Application.userList()">User List</a></p>
+    <p><a href="@routes.Application.todo()">TODO Sample</a></p>
+    <p><a href="http://localhost:9000/sample/55">Route Sample 1</a></p>
+    <p><a href="http://localhost:9000/sample?p1=99&p2=hi">Route Sample 2</a></p>
+    <p><a href="http://localhost:9000/splat/this/needs/a/splat">Route Sample 3</a></p>
+    <p><a href="http://localhost:9000/regex/123abc">Route Sample 4</a></p>
 
-}
+} {&nbsp;}

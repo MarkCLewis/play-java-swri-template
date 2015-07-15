@@ -8,15 +8,25 @@ GET     /                           controllers.Application.index()
 # Users
 GET		/users						controllers.Application.userList()
 
-GET		/user/:uname				controllers.Application.displayUser(uname:String)
+GET		/users/new					controllers.Application.newUser()
 
-GET		/user/new					controllers.Application.newUser()
+GET		/user/:uname				controllers.Application.displayUser(uname:String)
 
 GET		/user/edit/:uname			controllers.Application.editUser(uname:String)
 
 POST	/user/save					controllers.Application.saveUser()
 
 DELETE	/user/:uname				controllers.Application.deleteUser(uname:String)
+
+GET		/todo						controllers.Application.todo()
+
+GET     /sample/:num                controllers.Application.intArgument(num:Int)
+
+GET     /sample                     controllers.Application.twoParams(p1:Int ?= 0,p2:String)
+
+GET     /regex/$id<\d+\w+>         controllers.Application.regexOrSplatArgument(id)
+
+GET     /splat/*splat              controllers.Application.regexOrSplatArgument(splat)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

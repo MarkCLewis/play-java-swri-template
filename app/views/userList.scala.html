@@ -1,9 +1,14 @@
 @(users:List[User])
 
 @main("User List") {
+  <div class="row">&nbsp;</div>
+  <div class="row">&nbsp;</div>
+  <div class="row">&nbsp;</div>
+  <div class="row"><div class="active col-md-3 col-md-offset-1 bg-info text-center" id="edit">
+    <a href="@routes.Application.newUser()">Add</a>
+  </div></div>
+} {
     <h3 class="text-center">User List</h3>
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2"> 
         <table class="table table-striped">
             <thead>
               <tr><th>User Name</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th></tr>
@@ -12,6 +17,4 @@
         		<tr><td><a href="@routes.Application.displayUser(user.userName)">@user.userName</a></td><td contenteditable>@user.firstName</td><td>@user.lastName</td><td>@user.email</td><td>@user.phone</td></tr>
         	}
         </table>
-      </div>
-    </div>
-}
+} {&nbsp;}
