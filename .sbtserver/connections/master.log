@@ -395,3 +395,10 @@ Taking next connection to: 64209
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
 Taking next connection to: 64209
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+1 daemon clients are connected.
+Server socket thread exiting.
+1 clients open, will close them...
+All client sockets have been closed.
+Closing the 10200@MLEWIS7 logs at Wed Jul 15 15:50:12 CDT 2015, goodbye.
